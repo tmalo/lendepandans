@@ -30,12 +30,8 @@ export default async function RootLayout({
 	const lang = (await params).lang
 	return (
 		<html lang={lang} className={`${merriweather.variable} ${montserrat.variable}`}>
-			<body className="font-body min-h-screen flex flex-col">
-				<header className="border-b">
-					<Navigation lang={lang} />
-				</header>
-				<main className="container mx-auto px-4 py-8 flex-1">{children}</main>
-				<Footer lang={lang} />
+			<body className="font-body">
+				{children}
 			</body>
 		</html>
 	)
